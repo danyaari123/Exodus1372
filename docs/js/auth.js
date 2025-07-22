@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('password');
     const errorMessage = document.getElementById('errorMessage');
     const logoutBtn = document.getElementById('logoutBtn');
+    const homeBtn = document.getElementById('homeBtn');
     const forgotPasswordLink = document.getElementById('forgotPasswordLink');
     const resetMessage = document.getElementById('resetMessage');
 
@@ -129,6 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }).catch((error) => {
                 console.error("auth.js: Logout error:", error);
             });
+        });
+    }
+    if (homeBtn) {
+        homeBtn.addEventListener('click', () => {
+            window.location.href = '../homepage/index.html';
         });
     }
 
