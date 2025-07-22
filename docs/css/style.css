@@ -1,0 +1,361 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-container {
+    flex: 1 0 auto; /* Take up available space */
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: 24px;
+    color: #888;
+    font-size: 0.95em;
+}
+/* --- Basic Reset & Box Sizing --- */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contact-btn {
+    display: block;
+    width: 100%;
+    background-color: #16a085;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(22, 160, 133, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-btn:hover, .contact-btn:focus {
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(22, 160, 133, 0.13);
+}
+
+/* --- General Styles & Page Background --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: url('../images/backgroundforcal.png'); /* Make sure this path is correct */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex; /* Helps in centering .page-content-area if needed, or just for body padding */
+    justify-content: center; /* Center .page-content-area horizontally */
+    padding: 20px; /* Overall padding for the page, background shows here */
+}
+.cowtitle{
+    height: 160px;
+    width: 640px;
+    align-items: center;
+    align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.cowtitle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* --- Overall Page Content Area --- */
+.page-content-area { /* This wraps the .container if you want outer padding different from container padding */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container { /* Main white box holding title and the two columns */
+    width: 100%;
+    max-width: 1600px; /* Adjust for very wide screens */
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1.header-title {
+    font-size: 2.8em;
+    margin-top: 0; /* Remove top margin if .container has padding */
+    margin-bottom: 25px;
+    color: #16a085;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* --- Main Two-Column Layout (Desktop) --- */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: row; /* Calendar and Announcements side-by-side */
+    width: 100%;
+    gap: 25px; /* The gap where the body background shows through */
+}
+
+.calendar-container-wrapper {
+    flex: 3 1 65%; /* Grow 3, Shrink 1, Basis 65% (Calendar takes more space) */
+    min-width: 450px; /* Prevent calendar from getting too small */
+    display: flex;
+    flex-direction: column; /* Stack calendar header and grid within this wrapper */
+}
+
+.announcements-container {
+    flex: 1 1 30%; /* Grow 1, Shrink 1, Basis 30% (Announcements take less space) */
+    min-width: 300px;
+    max-width: 450px; /* Max width for announcements column */
+    background-color: rgba(248, 249, 250, 0.9); /* Slightly transparent light gray */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh + 150px); /* Adjust based on overall padding and title height */
+                                      /* Allows internal scrolling for announcements list */
+}
+
+
+/* --- Login & Signup Pages (Centered) --- */
+.login-container { /* Also used by signup-container */
+    width: 100%;
+    max-width: 400px;
+    margin: 15vh auto 0;
+    padding: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"] {
+    width: calc(100% - 24px); padding: 12px; margin-bottom: 20px; border: 1px solid #ccc;
+    border-radius: 5px; box-sizing: border-box; font-size: 1em;
+}
+.login-container button {
+    width: 100%; padding: 12px; background-color: #16a085; color: white; border: none;
+    border-radius: 5px; cursor: pointer; font-size: 1.1em; transition: background-color 0.3s ease;
+}
+.login-container button:hover { background-color: #1abc9c; }
+.error-message { color: #e74c3c; margin-top: 12px; font-size: 0.9em; min-height: 1.3em; }
+.reset-message.success, .signup-container .reset-message.success { color: #2ecc71; } /* For signup success message */
+.forgot-password-section, .form-links { margin-top: 20px; text-align: center; font-size: 0.9em; }
+.forgot-password-section a, .form-links a { color: #3498db; text-decoration: none; }
+.forgot-password-section a:hover, .form-links a:hover { text-decoration: underline; }
+.reset-message { margin-top: 10px; font-size: 0.9em; min-height: 1.3em; line-height: 1.4; }
+
+
+/* --- Calendar Specific Styles --- */
+.calendar-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; padding: 0 5px; flex-wrap: wrap;
+}
+.calendar-header button {
+    background-color: #3498db; color: white; border: none; padding: 10px 16px;
+    border-radius: 5px; cursor: pointer; font-size: 0.95em; transition: background-color 0.3s ease; margin: 4px;
+}
+.calendar-header button:hover { background-color: #2980b9; }
+#monthYearDisplay { font-size: 1.8em; font-weight: 600; color: #2c3e50; margin: 5px 15px; text-align: center; flex-grow: 1;}
+#addEventBtn { background-color: #2ecc71; } #addEventBtn:hover { background-color: #27ae60; }
+.logout-btn { background-color: #e74c3c !important; color: white !important; 
+    display: flex; align-items: center; margin-left: auto;   
+    border: none; 
+    border-radius: 5px; cursor: pointer; font-size: 0.95em; transition: background-color 0.3s ease;
+}
+.logout-btn:hover { background-color: #c0392b !important; }
+.user-actions { display: flex; align-items: center; margin-left: auto; /* Pushes actions to the right if space allows */ }
+
+.calendar-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px;
+    border: 0px solid #14326db6; border-radius: 8px; overflow: hidden; background-color: #fff;
+}
+.calendar-day-header {
+    background-color: #f1f3f4; padding: 12px 5px; text-align: center;
+    font-weight: 500; font-size: 0.85em; color: #5f6368;
+    border-radius: 4px;
+}
+.calendar-day {
+    min-height: 120px; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0;
+    padding: 8px; position: relative; transition: background-color 0.2s ease;
+    background-size: cover; background-position: center; display: flex; flex-direction: column; cursor: default;
+}
+.calendar-day:nth-child(7n) { border-right: none; } /* Remove right border for last day in row */
+/* Remove bottom border for last row of days (more complex, can be done with JS or :nth-last-child if grid predictable) */
+
+.calendar-day.uploader-clickable { cursor: pointer; }
+.calendar-day .day-number {
+    font-weight: 500; font-size: 0.9em; margin-bottom: 5px; color: #3c4043;
+    background-color: rgba(255, 255, 255, 0.6); padding: 3px 5px; border-radius: 4px; align-self: flex-start; z-index: 1;
+}
+.calendar-day.other-month .day-number { color: #adb5bd; }
+.calendar-day.empty-day .day-number { background-color: rgba(255, 255, 255, 0.7); color: #70757a; }
+
+.calendar-day.current-day {
+    background-color: #e8f0fe; /* Light blue for current day */
+    /* border: 2px solid #1a73e8; */ /* Optional border */
+}
+.calendar-day.current-day .day-number {
+    background-color: #1a73e8; color: white; font-weight: bold;
+    width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; padding: 0;
+}
+.calendar-day.holiday-day { background-color: #fce4ec; /* Light pink for holidays */ }
+.holiday-name {
+    font-size: 0.78em; color: #c2185b; background-color: rgba(255, 255, 255, 0.75);
+    padding: 2px 5px; border-radius: 3px; margin-top: 4px; text-align: center;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; z-index: 1;
+}
+.calendar-day.empty-day.holiday-day { background-image: none !important; background-color: #fce4ec; }
+.calendar-day.empty-day.holiday-day .day-number { color: #424242; background-color: rgba(255,255,255,0.6); }
+
+.calendar-day:hover { background: #e2ecfa; }
+.calendar-day {
+    border-radius: 8px;
+}
+/* Events in Calendar */
+.event-list { flex-grow: 1; overflow-y: auto; margin-top: 4px; max-height: calc(120px - 40px); /* Adjust based on day cell height */ }
+.event-item {
+    background-color: #4285f4; /* Google Calendar blue */
+    color: white; padding: 4px 7px; border-radius: 4px; font-size: 0.8em;
+    margin-bottom: 4px; cursor: pointer; overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap; transition: background-color 0.2s ease; z-index: 2;
+}
+.event-item:hover { background-color: #1a73e8; }
+.event-item .event-time { font-weight: 500; display: block; font-size: 0.85em; }
+.event-item .event-title { opacity: 0.9; }
+
+
+/* --- Announcements Section --- */
+.announcements-container h3 {
+    margin-top: 0; color: #16a085; border-bottom: 1px solid #dadce0;
+    padding-bottom: 12px; margin-bottom: 15px; font-size: 1.35em; font-weight: 500;
+}
+.announcements-list {
+    flex-grow: 1; overflow-y: auto; margin-bottom: 15px; padding-right: 8px; /* Space for scrollbar */
+}
+.announcements-list::-webkit-scrollbar { width: 6px; }
+.announcements-list::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); border-radius: 10px;}
+.announcements-list::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 10px;}
+.announcements-list::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+
+.announcement-item {
+    background-color: #fff; padding: 12px 15px; border-radius: 6px;
+    margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 0.9em;
+    border-left: 3px solid #1abc9c; /* Accent border */
+}
+.announcement-author { font-weight: 600; color: #2980b9; font-size: 0.85em; margin-bottom: 3px; }
+.announcement-timestamp { font-size: 0.75em; color: #7f8c8d; float: right; line-height: 1.4; }
+.announcement-message { clear: both; word-wrap: break-word; line-height: 1.5; margin-top: 4px; color: #34495e;}
+.announcement-form textarea {
+    width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;
+    border-radius: 4px; box-sizing: border-box; font-size: 0.9em; min-height: 70px; resize: vertical;
+}
+.announcement-form button {
+    padding: 8px 15px; background-color: #16a085; color: white; border: none;
+    border-radius: 5px; cursor: pointer; font-size: 0.9em; transition: background-color 0.3s ease; float: right;
+}
+.announcement-form button:hover { background-color: #1abc9c; }
+.announcement-form::after { content: ""; clear: both; display: table; } /* Clearfix */
+
+
+/* --- Event Modal --- */
+.modal {
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+    width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.65);
+    padding-top: 8vh; /* More dynamic padding */
+}
+.modal-content {
+    background-color: #fefefe; margin: 0 auto; padding: 30px; border: none;
+    width: 90%; max-width: 520px; border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;
+}
+.close-btn {
+    color: #9e9e9e; position: absolute; top: 15px; right: 20px;
+    font-size: 30px; font-weight: bold; line-height: 1;
+}
+.close-btn:hover, .close-btn:focus { color: #333; text-decoration: none; cursor: pointer; }
+/* ... (rest of modal content styles: h3, label, input, textarea, form-actions button as before) ... */
+.modal-content h3 { margin-top: 0; color: #16a085; font-size: 1.6em; margin-bottom: 20px;}
+.modal-content label { display: block; margin-bottom: 6px; font-weight: 500; color: #495057; font-size: 0.9em;}
+.modal-content input[type="text"], .modal-content input[type="date"], .modal-content input[type="time"], .modal-content textarea { width: calc(100% - 22px); padding: 10px; margin-bottom: 18px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-size: 0.95em; }
+.modal-content .form-actions button { margin-top: 10px; }
+
+
+/* --- MOBILE & RESPONSIVE STYLES --- */
+@media (max-width: 1024px) { /* For tablets and smaller desktops where side-by-side might be too cramped */
+    .main-content-wrapper {
+        flex-direction: column; /* Stack calendar and announcements */
+        gap: 30px;
+    }
+    .calendar-container-wrapper {
+        flex-basis: auto; min-width: 100%; order: 1;
+    }
+    .announcements-container {
+        flex-basis: auto; min-width: 100%; max-width: none; order: 2;
+        margin-top: 0; /* Gap is already handled by main-content-wrapper */
+        max-height: 50vh; /* Or auto if you prefer it to grow */
+    }
+}
+
+@media (max-width: 767px) { /* For mobile phones */
+    body { padding: 10px; }
+    .container { padding: 15px; }
+    h1.header-title { font-size: 2.2em; margin-bottom: 20px; }
+
+    .calendar-header {
+        padding: 0; flex-direction: column; align-items: stretch;
+    }
+    #monthYearDisplay { font-size: 1.5em; margin: 10px 0; order: -1; /* Month/Year first */ }
+    .calendar-header button { width: 100%; margin: 5px 0; } /* Full width buttons */
+    .user-actions { width: 100%; justify-content: space-between; margin-top: 10px; order: 1;}
+
+    .calendar-day { min-height: 90px; padding: 6px; }
+    .calendar-day .day-number { font-size: 0.85em; }
+    .holiday-name, .event-item { font-size: 0.75em; padding: 3px 5px;}
+    .event-list { max-height: calc(90px - 38px); }
+
+
+    .login-container { margin-top: 10vh; padding: 25px; }
+    .modal-content { width: 95%; padding: 20px; margin-top: 8vh; }
+    .modal-content .form-actions button { width: calc(50% - 5px); margin-right: 10px; }
+    .modal-content .form-actions button:last-child { margin-right: 0; }
+
+    transform: scale(0.5);
+    transform-origin: top left;
+    width: 200vw;
+        height: 200vh;
+    overflow-x: auto; 
+}
+
+@media (max-width: 480px) { /* Extra small screens */
+    h1.header-title { font-size: 1.8em; }
+    #monthYearDisplay { font-size: 1.3em; }
+    .calendar-day { min-height: 75px; }
+    .event-list { max-height: calc(75px - 35px); }
+    .holiday-name, .event-item { font-size: 0.7em; }
+    .announcements-container h3 { font-size: 1.15em; }
+    .announcement-item { font-size: 0.85em; }
+    .announcement-form textarea { font-size: 0.85em; min-height: 60px; }
+    .announcement-form button { font-size: 0.85em; padding: 7px 12px; }
+    .modal-content h3 { font-size: 1.3em; }
+    .modal-content input, .modal-content textarea, .modal-content label { font-size: 0.9em; }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info - Exodus Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contacts-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        .contact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .contact-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 24px 18px;
+            width: 220px;
+            text-align: center;
+        }
+        .contact-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 14px;
+            border: 2px solid #16a085;
+        }
+        .contact-card .name {
+            font-weight: 600;
+            font-size: 1.15em;
+            margin-bottom: 6px;
+            color: #16a085;
+        }
+        .contact-card .phone,
+        .contact-card .email {
+            font-size: 0.97em;
+            margin-bottom: 4px;
+            color: #34495e;
+            word-break: break-all;
+        }
+        .back-btn {
+            margin-top: 24px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 22px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .back-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="contacts-container">
+        <h1 style="text-align:center; color:#16a085;">Contact Information</h1>
+        <div class="contact-list">
+            <div class="contact-card">
+                <img src="xander.jpg" alt="Godol">
+                <div class="name">Xander Dobin (Godol)</div>
+                <div class="phone">203-889-6767</div>
+                <div class="email">xanderdobin@gmail.com</div>
+            </div>
+            <div class="contact-card">
+                <img src="ryan.jpg" alt="Ryan Lurie">
+                <div class="name">Ryan Lurie (Advisor)</div>
+                <div class="phone">203-464-5100</div>
+                <div class="email">ryanlurieCT@gmail.com</div>
+            </div>
+            <div class="contact-card">
+                <img src="max.jpg" alt="Max Trachten">
+                <div class="name"> T-Dawg (Max Trachten) (Advisor)</div>
+                <div class="phone">860-209-6326</div>
+                <div class="email">mtrachten99@gmail.com</div>
+            </div>
+            <div class="contact-card">
+                <img src="max.jpg" alt="Jaron Dembsky">
+                <div class="name">Jaron Dembsky (site co-creator)</div>
+                <div class="phone">475-441-2320</div>
+                <div class="email">jaron@realemail.notfake</div>
+            </div>
+            <div class="contact-card">
+                <img src="max.jpg" alt="Dan Yaari">
+                <div class="name">Dan Yaari (site co-creator)</div>
+                <div class="phone">203-390-1542</div>
+                <div class="email">Yaari.dandan@gmail.com</div>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <button class="back-btn" onclick="window.location.href='index.html'">Back to Calendar</button>
+            <button class="back-btn" onclick="window.location.href='../homepage/index.html'">Back to home page</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Dan Yaari and Jaron Dembsky.</p>
+    </div>
+</body>
+</html>
+
