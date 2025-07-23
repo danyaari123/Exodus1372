@@ -1,4 +1,3 @@
-<!-- Exodus AZA #1372 Homepage -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,12 +23,14 @@
 			<li><a href="#events">Events</a></li>
 			<li><a href="#upcoming">Upcoming</a></li>
 			<li><a href="#board">Board</a></li>
+			<li><a href="#sponsor">Sponsor</a></li>
 			<li><a href="../docs/contact.html">Contact</a></li>
 		</ul>
 	</nav>
 
 	<main class="main-content">
 
+		<!-- Chapter Description -->
 		<section class="chapter-desc">
 			<div class="bubble">
 				<img class="hero-image" src="../docs/caltitle1.png" alt="Hero Image" />
@@ -38,17 +39,19 @@
 			</div>
 		</section>
 
+		<!-- Upcoming Events -->
 		<section class="upcoming-events" id="upcoming">
 			<div class="bubble">
 				<h3>Upcoming Events</h3>
 				<ul class="event-list">
-					<li><strong>August 29, 2025:</strong> chapter Kickoff</li>
-					<li><strong>September 4, 2025:</strong> basketball</li>
-					<li><strong>September 23, 2025:</strong> XDA kickoff</li>
+					<li><strong>August 29, 2025:</strong> Chapter Kickoff</li>
+					<li><strong>September 4, 2025:</strong> Basketball</li>
+					<li><strong>September 23, 2025:</strong> XDA Kickoff</li>
 				</ul>
 			</div>
 		</section>
 
+		<!-- Recent Events -->
 		<section class="recent-events" id="events">
 			<div class="bubble">
 				<h3>Recent Events</h3>
@@ -67,10 +70,12 @@
 			</div>
 		</section>
 
+		<!-- Our Board -->
 		<section class="our-board" id="board">
 			<div class="bubble">
 				<h3>Our Board</h3>
 				<div class="board-members">
+					
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Godol" />
 						<span>Godol</span>
@@ -81,7 +86,6 @@
 							<li>fun fact</li>
 						</ul>
 					</div>
-
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Sgan" />
 						<span>Sgan</span>
@@ -92,7 +96,6 @@
 							<li>fun fact</li>
 						</ul>
 					</div>
-
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Moreh" />
 						<span>Moreh</span>
@@ -103,7 +106,6 @@
 							<li>fun fact</li>
 						</ul>
 					</div>
-
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Mazkir" />
 						<span>Mazkir</span>
@@ -114,7 +116,6 @@
 							<li>fun fact</li>
 						</ul>
 					</div>
-
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Shaliach" />
 						<span>Shaliach</span>
@@ -124,8 +125,8 @@
 							<li>fun fact</li>
 							<li>fun fact</li>
 						</ul>
-					</div>
 
+					</div>
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Gizbor" />
 						<span>Gizbor</span>
@@ -135,8 +136,8 @@
 							<li>fun fact</li>
 							<li>fun fact</li>
 						</ul>
-					</div>
 
+					</div>
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Ozer" />
 						<span>Ozer</span>
@@ -146,26 +147,68 @@
 							<li>fun fact</li>
 							<li>fun fact</li>
 						</ul>
-					</div>
 
+					</div>
 					<div class="member">
 						<img class="member-image" src="nopic.jpg" alt="Shotare Godol" />
 						<span>Shotare Godol</span>
 						<p>Aitan Herman</p>
 						<ul class="fun-facts">
-							<li>fun fact</li>
-							<li>fun fact</li>
-							<li>fun fact</li>
+							<li>Team safety chief</li>
+							<li>Wears a cape in spirit</li>
+							<li>Collects Funko Pops</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- Sponsor Form Section -->
+		<section class="sponsor-form-section" id="sponsor">
+			<div class="bubble">
+				<h3>Sponsor / Donator Form</h3>
+				<form class="sponsor-form" action="mailto:dandan.yaari6@gmail.com" method="POST" enctype="text/plain">
+					<label for="sponsor-name">Name</label>
+					<input type="text" id="sponsor-name" name="Name" placeholder="Your Name" required>
+
+					<label for="sponsor-email">Email</label>
+					<input type="email" id="sponsor-email" name="Email" placeholder="you@email.com" required>
+
+					<label for="sponsor-phone">Phone</label>
+					<input type="tel" id="sponsor-phone" name="Phone" placeholder="(123) 456-7890" required>
+
+					<label for="donation-amount">Donation Amount ($)</label>
+					<input type="number" id="donation-amount" name="Amount" min="1" placeholder="50" required>
+
+					<label for="appear-site">Appear on Website?</label>
+					<select id="appear-site" name="Appear on Website" required>
+						<option value="" disabled selected>Select</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+
+					<label for="shirt">Appear on Shirt?</label>
+					<select id="shirt" name="Appear on Shirt" required>
+						<option value="" disabled selected>Select</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+
+					<label for="details">Extra Details</label>
+					<textarea id="details" name="Details" rows="3" placeholder="Any additional message or info"></textarea>
+
+					<button type="submit">Submit</button>
+				</form>
+				<p class="note">Thank you for supporting Exodus AZA! You will be contacted via email.</p>
+			</div>
+		</section>
+
+		<!-- Footer -->
 		<div class="footer">
 			<p>&copy; Dan Yaari and Jaron Dembsky.</p>
 			<p>For any issues, please <a href="../docs/contact.html">contact us</a>.</p>
 		</div>
+
 	</main>
 
 	<script src="script.js"></script>

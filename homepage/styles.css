@@ -367,3 +367,51 @@ h3 {
 	opacity: 1;
 	transform: translateY(0) scale(1) rotateZ(0deg);
 }
+
+.sponsor-form-section {
+	margin-bottom: 36px;
+}
+
+.sponsor-form label {
+	display: block;
+	margin-top: 14px;
+	font-weight: 600;
+	color: var(--main-color);
+}
+
+.sponsor-form input,
+.sponsor-form select,
+.sponsor-form textarea {
+	width: 100%;
+	margin-top: 4px;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-family: inherit;
+	background: #fafafa;
+}
+
+.sponsor-form button {
+	margin-top: 16px;
+	background: var(--main-color);
+	color: #fff;
+	padding: 10px 18px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1rem;
+	transition: background 0.2s;
+}
+
+.sponsor-form button:hover {
+	background: var(--accent-color);
+}
+
+.sponsor-form .note {
+	margin-top: 10px;
+	color: #777;
+	font-size: 0.9em;
+	line-height: 1.3;
+}
