@@ -515,4 +515,18 @@ a:hover {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
+  .input-field {
+	height: 44px;
+    line-height: 44px;
+    padding: 0 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+    .sponsor-form textarea {
+    height: auto;
+    min-height: 100px;
+    line-height: 1.4;
+    padding: 8px 12px;
+  }
 }
