@@ -41,7 +41,33 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 	// Optionally, clear fields on submit (comment/uncomment as desired)
 	form.addEventListener('submit', function(e) {
-		e.preventDefault(); // Uncomment to prevent real submission for demo/testing
+		// e.preventDefault(); // Uncomment to prevent real submission for demo/testing
 		fields.forEach(field => localStorage.removeItem(field));
 	});
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+    // Initialize with your EmailJS public key!
+    emailjs.init({
+        publicKey: "6bf7NhIB_DHhPZN6G"
+    });
+
+    document.getElementById("sponsorForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        emailjs.sendForm(
+        "service_kg1roki",    // e.g., "service_abc123"
+        "template_5zjqhin",   // e.g., "template_xyz789"
+        this
+        )
+        .then(function() {
+        document.getElementById('sponsor-success').textContent = "Thank you! Your sponsorship has been sent.";
+        document.getElementById("sponsorForm").reset();
+        }, function(error) {
+        document.getElementById('sponsor-success').textContent = "Failed to send. Please try again.";
+        console.log('FAILED...', error);
+        });
+    });
+    });
+
+
