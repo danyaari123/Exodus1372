@@ -222,7 +222,7 @@ body {
   max-width: 100%;  /* never overflow container width */
   object-fit: contain; /* show full image with aspect ratio */
   display: block;      /* remove inline gap artifacts */
-  border-radius: 0 0 90px 90px; /* keep same rounding */
+  border-radius: 1px; /* keep same rounding */
 }
 
 
