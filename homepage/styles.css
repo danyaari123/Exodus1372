@@ -502,3 +502,17 @@ a:hover {
     flex-wrap: wrap;
   }
 }
+
+/* For screens smaller than 600px (phones) */
+@media screen and (max-width: 550px) {
+  /* Hide specified nav links */
+  .main-nav a.hide-on-phone {
+    display: none !important;
+  }
+
+  /* Reduce horizontal padding inside bubbles */
+  .bubble {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
