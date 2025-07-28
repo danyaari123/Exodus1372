@@ -53,10 +53,10 @@ body {
 }
 
 .calendar-icon {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   margin-top: 12px;
-  background: url('calendar-icon.png') center/70% no-repeat;
+  background: url('calendar-icon.jpg') center/70% no-repeat;
   color: white;
 }
 

@@ -1,0 +1,419 @@
+:root {
+	--main-color: #16a085;
+	--accent-color: #1abc9c;
+	--neutral-light: #f9f9f9;
+	--text-dark: #222;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+	background: url('../docs/images/backgroundforcal.png') no-repeat center center fixed;
+	background-size: cover;
+	color: #000;
+	min-height: 100vh;
+}
+
+/* Header */
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--main-color);
+	height: 58px;
+	padding: 0 24px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	color: white;
+}
+
+.logo img {
+	width: 110px;
+	height: 55px;
+	border-radius: 50%;
+	margin-top: 12px;
+}
+
+.header h1 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 1.5rem;
+	flex: 1;
+	text-align: center;
+}
+
+.calendar-icon {
+	width: 32px;
+	height: 32px;
+	margin-top: 12px;
+	background: url('calender.webp') center/70% no-repeat;
+	color: white;
+}
+
+/* Navigation bar */
+.main-nav {
+	position: sticky;
+	top: 58px; /* below header */
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: saturate(180%) blur(10px);
+	z-index: 999;
+	padding: 8px 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.main-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.main-nav a {
+	text-decoration: none;
+	color: var(--main-color);
+	font-weight: 600;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+	color: var(--accent-color);
+	text-decoration: underline;
+}
+
+/* Main Content Container */
+.main-content {
+	max-width: 900px;
+	margin: 24px auto 60px auto;
+	padding: 0 24px;
+}
+
+/* Hero and chapter */
+.hero-image {
+	width: 100%;
+	max-width: 875px;
+	height: 218px;
+	object-fit: cover;
+	margin-top: -16px;
+	border-radius: 0 0 90px 90px;
+}
+
+.chapter-desc {
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.chapter-desc h2 {
+	margin: 8px 0 4px 0;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--text-dark);
+}
+
+.small-desc {
+	font-size: 1rem;
+	color: #555;
+	margin: 0;
+}
+
+/* Bubble container styling - slightly transparent */
+.bubble {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 18px;
+	padding: 16px 24px;
+	margin: 24px 0;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	animation: fadeInUp 0.6s ease both;
+}
+
+/* Upcoming Events (now inside main content) */
+.upcoming-events h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: var(--text-dark);
+}
+
+.event-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 600px;
+	font-size: 1rem;
+	color: #555;
+}
+
+.event-list li {
+	margin: 12px 0;
+	line-height: 1.4;
+}
+
+/* Recent Events */
+.recent-events h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 8px;
+	color: var(--text-dark);
+}
+
+.events-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 24px;
+}
+
+.event {
+	background: #ffffff;
+	padding: 12px;
+	border-radius: 12px;
+	width: 220px;
+	text-align: center;
+	margin: 8px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.event-image {
+	width: 160px;
+	height: 110px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-bottom: 8px;
+}
+
+.event strong {
+	display: block;
+	margin: 8px 0 2px 0;
+	font-size: 1.05rem;
+	color: var(--text-dark);
+}
+
+.event p {
+	font-size: 0.98rem;
+	color: #555;
+}
+
+/* Chapter Highlights */
+.achievements h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: var(--text-dark);
+}
+
+.achievements ul {
+	list-style: disc inside;
+	color: #555;
+	max-width: 600px;
+	margin: auto;
+	font-size: 1rem;
+}
+
+.achievements li {
+	margin: 8px 0;
+}
+
+/* Our Board */
+.our-board {
+	margin-top: 36px;
+}
+
+.our-board > .bubble {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.our-board h3 {
+	text-align: center;
+	font-size: 1.35rem;
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: var(--text-dark);
+}
+
+.board-members {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 18px 24px;
+}
+
+.member {
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 150px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	padding: 12px 0 8px 0;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.member-image {
+	width: 95px;
+	height: 70px;
+	object-fit: cover;
+	border-radius: 7px;
+	margin-bottom: 5px;
+	background-color: #fff;
+}
+
+.member span {
+	margin-top: 3px;
+	font-weight: 600;
+	font-size: 1rem;
+	color: var(--text-dark);
+	text-align: center;
+}
+
+.member p {
+	color: #555;
+	font-size: 0.97rem;
+	margin: 2px 0 0 0;
+	text-align: center;
+}
+
+
+.footer {
+	text-align: center;
+	margin: 24px auto;
+	color: #888;
+	font-size: 0.95em;
+	max-width: 900px;
+	background-color: #ffffff00;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+	.events-container,
+	.board-members {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.event,
+	.member {
+		width: 90%;
+		max-width: 280px;
+	}
+}
+
+/* Hover animations */
+.event:hover,
+.member:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+	color: var(--main-color);
+	text-decoration: underline;
+}
+
+/* FadeInUp animation */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+h3 {
+	text-transform: capitalize;
+}
+
+.fun-facts {
+	list-style-type: disc;
+	padding-left: 1.2em;
+	margin: 8px 0 0 0;
+	font-size: 0.9rem;
+	color: #555;
+	text-align: left;
+}
+
+.member p {
+	font-weight: 600;
+	color: var(--text-dark);
+	margin-bottom: 6px;
+	text-align: center;
+}
+.bubble {
+	opacity: 0;
+	transform: translateY(60px) scale(0.95) rotateZ(0deg);
+	transition:
+		opacity 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+		transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+	will-change: opacity, transform;
+}
+
+.bubble.show {
+	opacity: 1;
+	transform: translateY(0) scale(1) rotateZ(0deg);
+}
+
+.sponsor-form-section {
+	margin-bottom: 36px;
+}
+
+.sponsor-form label {
+	display: block;
+	margin-top: 14px;
+	font-weight: 600;
+	color: var(--main-color);
+}
+
+.sponsor-form input,
+.sponsor-form select,
+.sponsor-form textarea {
+	width: 100%;
+	margin-top: 4px;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-family: inherit;
+	background: #fafafa;
+}
+
+.sponsor-form button {
+	margin-top: 16px;
+	background: var(--main-color);
+	color: #fff;
+	padding: 10px 18px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1rem;
+	transition: background 0.2s;
+}
+
+.sponsor-form button:hover {
+	background: var(--accent-color);
+}
+
+.sponsor-form .note {
+	margin-top: 10px;
+	color: #777;
+	font-size: 0.9em;
+	line-height: 1.3;
+}
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Exodus AZA #1372</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<a href="https://bbyo.org/become-a-member"><img src="becomeamember.png" alt="Logo" /></a>
+		</div>
+		<h1>EXODUS</h1>
+		<a href="../docs/login.html">
+			<div class="calendar-icon"></div>
+		</a>
+	</header>
+
+	<nav class="main-nav">
+		<ul>
+			
+			<li><a href="#upcoming">Upcoming Event</a></li>
+			<li><a href="#events">Recent Events</a></li>
+			<li><a href="#board">Our Board</a></li>
+			<li><a href="#sponsor">Support Us</a></li>
+			<li><a href="../docs/contact.html">Contact us</a></li>
+		</ul>
+	</nav>
+
+	<main class="main-content">
+
+		<!-- Chapter Description -->
+		<section class="chapter-desc">
+			<div class="bubble">
+				<img class="hero-image" src="../docs/caltitle1.png" alt="Hero Image" />
+				<h2>Exodus AZA #1372</h2>
+				<p class="small-desc">Best chapter in the Connecticut Valley Region</p>
+			</div>
+		</section>
+
+		<!-- Upcoming Events -->
+		<section class="upcoming-events" id="upcoming">
+			<div class="bubble">
+				<h3>Upcoming Events</h3>
+				<ul class="event-list">
+					<li><strong>August 29, 2025:</strong> Chapter Kickoff</li>
+					<li><strong>September 4, 2025:</strong> Basketball</li>
+					<li><strong>September 23, 2025:</strong> XDA Kickoff</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Recent Events -->
+		<section class="recent-events" id="events">
+			<div class="bubble">
+				<h3>Recent Events</h3>
+				<div class="events-container">
+					<div class="event">
+						<img class="event-image" src="nophoto.jpg" alt="Elections" />
+						<strong>Elections</strong>
+						<p>Congratulations to our new Exodus board.</p>
+					</div>
+					<div class="event">
+						<img class="event-image" src="seniorsendoff.png" alt="Senior Send Off" />
+						<strong>Senior Send Off</strong>
+						<p>The boys had a great time in our senior send off meeting! BBQ, games, new board install, fun, and more.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Our Board -->
+		<section class="our-board" id="board">
+			<div class="bubble">
+				<h3>Our Board</h3>
+				<div class="board-members">
+					
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Godol" />
+						<span>Godol</span>
+						<p>Michael Yaari</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Sgan" />
+						<span>Sgan</span>
+						<p>Avi Dobin</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Moreh" />
+						<span>Moreh</span>
+						<p>Eli Gross</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Mazkir" />
+						<span>Mazkir</span>
+						<p>Gabe Levy</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Shaliach" />
+						<span>Shaliach</span>
+						<p>Joe Vatner</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Gizbor" />
+						<span>Gizbor</span>
+						<p>Joey Grutzendler</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Ozer" />
+						<span>Ozer</span>
+						<p>Jacob Klee</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+
+					</div>
+					<div class="member">
+						<img class="member-image" src="nopic.jpg" alt="Shotare Godol" />
+						<span>Shotare Godol</span>
+						<p>Aitan Herman</p>
+						<ul class="fun-facts">
+							<li>fun fact</li>
+							<li>fun fact</li>
+							<li>fun fact</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sponsor Form Section -->
+		<!-- Add this at the bottom of your site in a bubble section -->
+		<section class="sponsor-form-section" id="sponsor">
+		<div class="bubble">
+			<h3>Sponsor / Donator Form</h3>
+			<form class="sponsor-form" id="sponsorForm">
+			<label for="sponsor-name">Name</label>
+			<input type="text" id="sponsor-name" name="name" required>
+
+			<label for="sponsor-email">Email</label>
+			<input type="email" id="sponsor-email" name="email" required>
+
+			<label for="amount">Donation Amount ($)</label>
+			<input type="number" id="amount" name="amount" required min="1">
+
+			<label for="appear-site">Appear on Website?</label>
+			<select id="appear-site" name="appear_site" required>
+				<option value="" disabled selected>Select</option>
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+			</select>
+
+			<label for="appear-shirt">Appear on Shirt?</label>
+			<select id="appear-shirt" name="appear_shirt" required>
+				<option value="" disabled selected>Select</option>
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+			</select>
+
+			<label for="details">Extra Details</label>
+			<textarea id="details" name="details" rows="3"></textarea>
+
+			<button type="submit">Submit</button>
+			<div id="sponsor-success" style="color: #16a085; margin-top:12px;"></div>
+			</form>
+		</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		
+  <ul>
+
+
+
+
+	</main>
+	
+	<div class="footer">
+		<p>&copy; Dan Yaari and Jaron Dembsky.</p>
+		<p>For any issues, please <a href="../docs/contact.html">contact us</a>.</p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

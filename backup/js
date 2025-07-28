@@ -1,0 +1,51 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const bubbles = document.querySelectorAll('.bubble');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  bubbles.forEach((bubble, i) => {
+    bubble.style.transitionDelay = `${i * 75}ms`;
+    observer.observe(bubble);
+  });
+
+  // Sponsor Form LocalStorage
+  const form = document.getElementById('sponsorForm');
+  const fields = ['sponsor-name', 'sponsor-email', 'amount', 'appear-site', 'appear-shirt', 'details'];
+
+  fields.forEach(field => {
+    const el = document.getElementById(field);
+    if (el && localStorage.getItem(field)) {
+      el.value = localStorage.getItem(field);
+    }
+    if (el) {
+      el.addEventListener('input', () => {
+        localStorage.setItem(field, el.value);
+      });
+    }
+  });
+
+  // EmailJS Submission
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    emailjs.sendForm('service_kg1roki', 'template_5zjqhin', form)
+      .then(() => {
+        document.getElementById('sponsor-success').textContent =
+          "Thank you! Your sponsorship has been sent.";
+        form.reset();
+        fields.forEach(field => localStorage.removeItem(field));
+      })
+      .catch(() => {
+        document.getElementById('sponsor-success').textContent =
+          "Error sending form. Please try again.";
+      });
+  });
+
+  emailjs.init('6bf7NhIB_DHhPZN6G');
+});
