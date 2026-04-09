@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid === $uid || root.child('users').child(auth.uid).child('role').val() === 'admin')",
+        ".validate": "newData.hasChildren(['uid', 'email', 'username', 'role']) && newData.child('uid').val() === $uid && newData.child('email').isString() && newData.child('username').isString() && ((root.child('users').child(auth.uid).child('role').val() === 'admin' && (newData.child('role').val() === 'pending' || newData.child('role').val() === 'member' || newData.child('role').val() === 'admin')) || (root.child('users').child(auth.uid).child('role').val() !== 'admin' && (((!data.exists()) && newData.child('role').val() === 'pending') || (data.exists() && newData.child('role').val() === data.child('role').val()))))"
+      }
+    },
+    "messages": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'admin'"
+    },
+    "events": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'admin'"
+    }
+  }
+}

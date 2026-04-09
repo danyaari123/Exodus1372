@@ -64,18 +64,17 @@ body {
     padding: 20px; /* Overall padding for the page, background shows here */
 }
 .cowtitle{
-    height: 160px;
-    width: 640px;
-    align-items: center;
-    align: center;
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
     margin-top: 0;
     margin-bottom: 25px;
+    object-fit: contain;
 }
 .cowtitle {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 /* --- Overall Page Content Area --- */

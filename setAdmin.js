@@ -1,25 +1,32 @@
 const admin = require("firebase-admin");
 
-// IMPORTANT: Download your service account key JSON file from
-// Firebase Console > Project Settings > Service accounts
-// Store it securely and DO NOT commit it to Git.
-const serviceAccount = require("./path/to/your-service-account-key.json"); // Update path
+const serviceAccount = require("./path/to/your-service-account-key.json");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://exoduswebsite-e45a6-default-rtdb.firebaseio.com"
 });
 
-const userEmailToMakeAdmin = "jasoncpumpkin247@gmail.com"; // << YOUR ADMIN EMAIL
+const userEmailToMakeAdmin = "dandan.yaari6@gmail.com"; // << YOUR ADMIN EMAIL
 
 admin.auth().getUserByEmail(userEmailToMakeAdmin)
   .then((userRecord) => {
-    // See the UserRecord reference: https://firebase.google.com/docs/reference/admin/node/firebase-admin.auth.userrecord
     console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
-    return admin.auth().setCustomUserClaims(userRecord.uid, { admin: true });
+    return admin.database().ref("users/" + userRecord.uid).once("value").then((snapshot) => {
+      const existing = snapshot.val() || {};
+
+      return admin.database().ref("users/" + userRecord.uid).set({
+        uid: userRecord.uid,
+        email: userRecord.email || userEmailToMakeAdmin,
+        username: existing.username || (userRecord.email ? userRecord.email.split("@")[0] : userRecord.uid),
+        role: "admin",
+        createdAt: existing.createdAt || Date.now(),
+        updatedAt: Date.now()
+      });
+    });
   })
   .then(() => {
-    console.log(`Successfully set custom claim 'admin: true' for user ${userEmailToMakeAdmin}.`);
-    console.log("User needs to log out and log back in for the claim to take effect on their ID token.");
+    console.log(`Successfully set Realtime Database role 'admin' for user ${userEmailToMakeAdmin}.`);
     process.exit(0);
   })
   .catch((error) => {
